@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Cognizant Maze Ransomware Attack Diamond Model
-description: A ransomware attack case study explained using Diamond Model.
-img: assets/img/Diamond_Model.png
+title: Diamond Model Case Study
+description: Cognizant maze ransomware attack explained using Diamond Model.
+img: assets/img/DM.png
 importance: 2
 category: Privacy Policy
 giscus_comments: false
@@ -19,7 +19,7 @@ The objective of this paper is to analyze the 2020 Maze ransomware attack on Cog
 3. Capability: The Maze Gang utilized their custom-developed Maze ransomware, which was installed through techniques like spam, spear-phishing, exploit kits, and Remote Access Trojans (RATs). The malware encrypted Cognizant's data and demanded a ransom payment, threatening to publicly leak the data if the ransom was not paid.
 4. Infrastructure: The Maze Gang's infrastructure included an FTP server for data exfiltration, command and control (C2) servers hosted on Russian or Lithuanian IP addresses, and various domains for publishing data from non-paying victims.
 
-<img src="../../assets/img/Diamond_Model.png" width="400em" height="700em">
+<img src="../../assets/img/Diamond_Model.png" width="450em" height="650em">
 
 ## Policy Assessment
 
