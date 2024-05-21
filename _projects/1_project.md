@@ -2,13 +2,14 @@
 layout: page
 title: Network Intrusion Detection System
 description: Detected and logged malicious executable files flowing through the network
-img: #assets/img/12.jpg
+img: assets/img/NIDS.png
 importance: 1
 category: Cybersecurity
 # related_publications: true
 ---
 
 ## Objective
+
 The objective of this project is to develop a network-based intrusion detection system (NIDS) that can detect and analyze potentially malicious executables being transferred over a network. The project involves setting up three virtual machines (VMs) - 'mal', 'vicky', and 'sandy' - and automating the process of detecting, transferring, and analyzing executable files across these VMs.
 
 ## Working
