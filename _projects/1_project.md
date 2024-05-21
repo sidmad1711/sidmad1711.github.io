@@ -4,7 +4,7 @@ title: Network Intrusion Detection System
 description: Detected and logged malicious executable files flowing through the network
 img: #assets/img/12.jpg
 importance: 1
-category: Network Defense
+category: Cybersecurity
 # related_publications: true
 ---
 

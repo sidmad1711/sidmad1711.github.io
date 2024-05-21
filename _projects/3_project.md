@@ -1,81 +1,27 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Ad Blockers and Online Privacy
+description: Evaluating the effectiveness of different ad blockers using OpenWPM
+img: assets/img/ad_blocker.jpeg
+# redirect: https://unsplash.com
 importance: 3
-category: work
+category: Cybersecurity
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Objective
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+The main objective of this project is to perform a comprehensive evaluation of the effectiveness of several popular ad blockers in mitigating various online tracking mechanisms employed by websites and third-party entities. The study utilizes the [OpenWPM](https://github.com/openwpm/OpenWPM) platform to conduct large-scale measurements across a diverse set of website categories.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Methodology and Analysis
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+1. Data Collection: The study examines five categories of websites: Entertainment, Gaming, E-commerce, Sports, and the Tranco list (a curated list of top websites). For each category, the top 300 most visited websites are crawled using OpenWPM in two modes: a "vanilla" mode without any ad blocker and multiple "non-vanilla" modes, each with a specific ad blocker enabled (uBlock Origin, Privacy Badger, Ghostery, and AdLock).
+2. Browser Automation: OpenWPM automates the browsing process using Selenium, interacting with Firefox browser instances. Separate browser profiles are created for each crawling mode to ensure isolation and prevent interference between configurations.
+3. Data Extraction: The crawling process generates SQLite databases containing browsing data, including HTTP requests, JavaScript executions, and cookie management. Custom Python scripts are used to extract and analyze relevant tracking vectors from these databases, such as third-party cookies, HTTP requests, and JavaScript API calls.
+4. Effectiveness Evaluation: The study quantifies the effectiveness of each ad blocker by comparing the number of distinct third-party domains identified during the "vanilla" mode crawls (without ad blockers) to those observed in the respective "ad blocker" mode crawls. A significant reduction in the number of third-party domains indicates stronger protection against online tracking.
+5. Analysis and Observations: The study analyzes the collected data to evaluate the relative performance of each ad blocker across the three tracking vectors (cookies, HTTP requests, and JavaScript API calls) and across different website categories. It also identifies the top third-party domains commonly used for tracking purposes.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Summary
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+The paper aims to provide insights into the current state of online tracking mechanisms and the relative effectiveness of popular ad blockers in mitigating these threats. By quantifying the strengths and limitations of these tools, this study highlights gaps in existing privacy protections and provides actionable recommendations for enhancing user privacy defenses, guiding tool developers, and informing policymakers on addressing invasive online tracking practices.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+Link to the [paper](https://sidmad1711.github.io/assets/pdf/Ad_blocker.pdf).
