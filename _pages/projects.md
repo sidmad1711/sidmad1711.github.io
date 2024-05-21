@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of some interesting projects.
 nav: true
 # nav_order: 3
-display_categories: [Cybersecurity]
+display_categories: [Privacy Policy, Network Defense, Threat Model]
 horizontal: false
 ---
 

@@ -1,81 +1,33 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Cognizant Maze Ransomware Attack Diamond Model
+description: A ransomware attack case study explained using Diamond Model.
+img: assets/img/Diamond_Model.png
 importance: 2
-category: work
-giscus_comments: true
+category: Privacy Policy
+giscus_comments: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Objective
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+The objective of this paper is to analyze the 2020 Maze ransomware attack on Cognizant, a Fortune 500 IT services company, using the Diamond Model framework. The Diamond Model provides a structured way to understand cyber attacks by examining four components: the adversary, the capability, the infrastructure, and the victim.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Diamond Model
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+1. Adversary: The Maze Gang, an anonymous group of cybercriminals, was the adversary behind the attack. Their intent was financial, aiming to extort money from Cognizant through ransomware.
+2. Victim: Cognizant, a multinational IT services company with over 341,000 employees, was the victim of the attack. The ransomware incident was disclosed by Cognizant on April 18, 2020.
+3. Capability: The Maze Gang utilized their custom-developed Maze ransomware, which was installed through techniques like spam, spear-phishing, exploit kits, and Remote Access Trojans (RATs). The malware encrypted Cognizant's data and demanded a ransom payment, threatening to publicly leak the data if the ransom was not paid.
+4. Infrastructure: The Maze Gang's infrastructure included an FTP server for data exfiltration, command and control (C2) servers hosted on Russian or Lithuanian IP addresses, and various domains for publishing data from non-paying victims.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+<img src="../../assets/img/Diamond_Model.png" width="400em" height="700em">
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## Policy Assessment
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+1. National laws should mandate the forceful protection of customer data for any organization storing that data.
+2. Many organizations do not adequately defend customer data due to a market failure for cybersecurity investment driven by a focus on profits over security.
+3. To combat ransomware, policy changes are needed to mandate basic security requirements and controls that each organization must implement.
+4. In addition to national laws, each organization should have a separate detailed ransomware policy covering prevention, monitoring, response and recovery procedures.
+5. Strategies like application whitelisting, patching, hardening, access controls and multi-factor authentication could help prevent future Maze-like attacks.
+6. A national compliance agency should be introduced to ensure organizations follow the mandated security requirements for protecting customer data from ransomware.
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+Link to the [paper](https://sidmad1711.github.io/assets/pdf/InfoSec_Policies_Diamond_model_paper.pdf).
